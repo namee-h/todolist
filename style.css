@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(159, 104, 210);
+    font-family: Arial, Helvetica, sans-serif;
+}   
+.container {
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    max-width: 800px;
+}
+
+.task-list-area{
+    border: 1px solid lightgray;
+    position: relative;
+    
+}
+
+.tab-items{
+    display: flex;
+    border-bottom: 1px solid lightgray;  
+}
+.tab-items div {
+    padding: 1em;
+    cursor: pointer;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;  
+    width: 100%;
+    position: relative;
+    height: 50px;
+    padding: 1em;
+    align-items: center;
+}
+
+#under-line{
+    position: absolute;
+    height: 4px;
+    width: 60px;
+    left: 0px;
+    top: 54px;
+    background-color: orange;
+    margin: 0;
+    transition: 0.5s;
+}
+.task-done{
+    background-color: lightgray;
+}
+.task-done span{
+    text-decoration: line-through;
+}
+.button-box{
+    display: flex;
+    background-color: white;
+    padding: 0;
+    height: 49px;
+    justify-content: right;
+    position: relative;
+    left : 1em;
+}
+.button-box button {
+    background-color: white;
+    border: 0;
+    padding-right: 2em;
+    padding-left: 2em;
+    
+}
+.input-area{
+    position: relative;
+}
+
+#user-input{
+    transition: padding-top 0.2s ease, margin-top 0.2 ease;
+    border: 1px solid wheat;
+    width: 80%; 
+}
+#user-input:focus{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid orange;
+    transition: 0.5s;
+    padding-top: 35px;
+}
+#user-input + label > span{
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #8f8f8f;
+    font-size: 14px;
+    top: 3px;
+    left: 10px;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+#add-button{
+    border: 0px;
+    background-color: white;
+}
+.fa-plus {
+    color: wheat;
+}
+.fa-check{
+    color: blueviolet;
+}
+.fa-trash{
+    color: gray;
+}
