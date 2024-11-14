@@ -1,27 +1,36 @@
 body {
     margin: 0;
-    background-image: url(./images/background.jpg);
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     background-repeat: no-repeat;
     background-size: cover;
-    color: rgb(159, 104, 210);
+    color: rgba(159, 104, 210, 0.685);
     font-family: Arial, Helvetica, sans-serif;
-}   
+} 
+.header{
+    text-align: center;
+    padding: 1em;
+    font-weight: 900;
+    
+}  
 .container {
     background-color: white;
     min-height: 100vh;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    max-width: 800px;
+    max-width: 700px;
+    margin-top: 20px;
+    border-radius: 24px;
+    margin-bottom: 20px;
 }
 
 .task-list-area{
-    border: 1px solid lightgray;
+    border: 1px solid rgba(137, 43, 226, 0.466);
     position: relative;
-    
+    border-radius: 4px;
 }
 
 .tab-items{
     display: flex;
-    border-bottom: 1px solid lightgray;  
+    border-bottom: 1px solid rgba(137, 43, 226, 0.466);
 }
 .tab-items div {
     padding: 1em;
@@ -30,7 +39,7 @@ body {
 .task {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid lightgray;  
+    border-bottom: 1px solid rgba(137, 43, 226, 0.466);
     width: 100%;
     position: relative;
     height: 50px;
@@ -44,15 +53,16 @@ body {
     width: 60px;
     left: 0px;
     top: 54px;
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.621);
     margin: 0;
     transition: 0.5s;
 }
 .task-done{
-    background-color: lightgray;
+    background-color: rgba(255, 183, 227, 0.164);
 }
 .task-done span{
     text-decoration: line-through;
+    
 }
 .button-box{
     display: flex;
@@ -71,7 +81,9 @@ body {
     
 }
 .input-area{
+    display: flex;
     position: relative;
+    justify-content: space-around;   
 }
 
 #user-input{
@@ -93,20 +105,21 @@ body {
     color: #8f8f8f;
     font-size: 14px;
     top: 3px;
-    left: 10px;
+    left: 12px;
     -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
     transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
 }
 #add-button{
     border: 0px;
     background-color: white;
+    width: 15%;
 }
 .fa-plus {
     color: wheat;
 }
 .fa-check{
-    color: blueviolet;
+    color: orange;
 }
 .fa-trash{
-    color: gray;
+    color: rgba(137, 43, 226, 0.466);
 }

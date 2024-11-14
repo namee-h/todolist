@@ -35,9 +35,8 @@ userInput.addEventListener("keypress",function(e){
     }
 })
 
-console.log(tabs)
 
-function addTask(){
+let addTask = ()=> {
     let taskValue = userInput.value;
     if (taskValue ==="") return alert ("할일을 입력해주세요");
     let task = {
@@ -51,14 +50,14 @@ function addTask(){
     render();
 }
 
-function render(){
+let render = ()=>{
     let result ="";
     list = [];
     if(mode ==="all"){
         list = taskList;
     }else{
         list = filterList;
-    }
+    } 
     for(let i = 0; i < list.length; i++){
         if(list[i].isComplete == true){
             result += `<div class="task task-done">
@@ -96,12 +95,12 @@ function toggleDone(id){
 
 function deleteTask(id){
   for(let i =0; i < taskList.length; i++){
-    if(taskList[i].id === id){
-        taskList.splice(i,1);
-        break;
-    }
-  }  
-  filter();
+        if(taskList[i].id === id){
+            taskList.splice(i,1);
+            break;
+        }
+    }  
+    filter();
 }
 
 function filter(e){
