@@ -36,7 +36,7 @@ userInput.addEventListener("keypress",function(e){
 })
 
 
-let addTask = ()=> {
+function addTask () {
     let taskValue = userInput.value;
     if (taskValue ==="") return alert ("할일을 입력해주세요");
     let task = {
@@ -50,7 +50,7 @@ let addTask = ()=> {
     render();
 }
 
-let render = ()=>{
+function render (){
     let result ="";
     list = [];
     if(mode ==="all"){
